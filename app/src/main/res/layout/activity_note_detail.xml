@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgcolor"
+    android:padding="20dp"
+    tools:context=".NoteDetail">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:theme="?actionBarTheme"
+        android:background="@color/bgcolor">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Diary"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="left"/>
+        <Button
+            android:id="@+id/deleteNoteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DELETE"
+            android:textSize="15sp"
+            android:backgroundTint="@color/bgcolor"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:onClick="deleteNote"/>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@color/white">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleEditText"
+            android:hint="Time/Day/Date"
+            android:background="#3000B0FF"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionEditText"
+            android:hint="Start Writing"
+            android:background="#3000B0FF"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:lines="10"
+            android:gravity="top"/>
+
+
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:onClick="saveNote"
+        android:text="SAVE DIARY"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/bgcolor"/>
+
+
+
+
+</LinearLayout>
